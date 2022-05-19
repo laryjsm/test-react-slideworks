@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { MagnifyingGlass } from "phosphor-react";
+import { CircleNotch, MagnifyingGlass } from "phosphor-react";
 
 import { Header, Main, Card, Footer } from "./styles";
 import { GlobalStyles } from "./style/global";
@@ -24,7 +24,6 @@ export const App = () => {
   return (
     <>
       <GlobalStyles />
-
       <Header>
         <img src={logo} />
         <div>
@@ -45,35 +44,38 @@ export const App = () => {
           </a>
         </div>
       </Header>
+      {data ? (
+        <Main>
+          {data &&
+            data.map((item) => {
+              return (
+                <Card key={item.id}>
+                  <img src={item.image} />
 
-      <Main>
-        {data &&
-          data.map((item) => {
-            return (
-              <Card key={item.id}>
-                <img src={item.image} />
+                  <h3>{item.title}</h3>
 
-                <h3>{item.title}</h3>
+                  <p>{item.author}</p>
 
-                <p>{item.author}</p>
+                  <p>{item.description}</p>
 
-                <p>{item.description}</p>
+                  <div>
+                    <div>{item.genre}</div>
 
-                <div>
-                  <div>{item.genre}</div>
-
-                  <p>
-                    {new Date(item.published).toLocaleDateString("pt-BR", {
-                      day: "2-digit",
-                      month: "short",
-                      year: "2-digit",
-                    })}
-                  </p>
-                </div>
-              </Card>
-            );
-          })}
-      </Main>
+                    <p>
+                      {new Date(item.published).toLocaleDateString("pt-BR", {
+                        day: "2-digit",
+                        month: "short",
+                        year: "2-digit",
+                      })}
+                    </p>
+                  </div>
+                </Card>
+              );
+            })}
+        </Main>
+      ) : (
+        <div class="lds-dual-ring"></div>
+      )}
 
       <Footer>
         <div className="div-image">
