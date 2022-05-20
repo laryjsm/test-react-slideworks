@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { CircleNotch, MagnifyingGlass } from "phosphor-react";
+import { MagnifyingGlass } from "phosphor-react";
 
 import { Header, Main, Card, Footer } from "./styles";
 import { GlobalStyles } from "./style/global";
@@ -25,7 +25,7 @@ export const App = () => {
     <>
       <GlobalStyles />
       <Header>
-        <img src={logo} />
+        <img src={logo} alt="logo-header"/>
         <div>
           <a href="#">Home</a>
 
@@ -50,7 +50,7 @@ export const App = () => {
             data.map((item) => {
               return (
                 <Card key={item.id}>
-                  <img src={item.image} />
+                  <img src={item.image} alt="book-cover"/>
 
                   <h3>{item.title}</h3>
 
@@ -79,7 +79,7 @@ export const App = () => {
 
       <Footer>
         <div className="div-image">
-          <img src={logo2} />
+          <img src={logo2} alt="logo-footer"/>
         </div>
 
         <div className="text-social">
@@ -90,15 +90,15 @@ export const App = () => {
           </div>
           <div className="div-social">
             <a href="https://www.instagram.com" target="_blank">
-              <img src={instagram} />
+              <img src={instagram} alt="logo-instagram"/>
             </a>
 
             <a href="https://www.twitter.com" target="_blank">
-              <img src={twitter} />
+              <img src={twitter} alt="logo-twitter"/>
             </a>
 
             <a href="https://www.facebook.com" target="_blank">
-              <img src={facebook} />
+              <img src={facebook} alt="logo-facebook"/>
             </a>
           </div>
         </div>
