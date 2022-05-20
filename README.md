@@ -1,7 +1,10 @@
 <h1 align="center">
   <img src="https://github.com/laryjsm/test-react-slideworks/blob/master/src/assets/logo.svg" alt="Bibbble" width="250px">
 </h1>
+
+[We are ONLINE, try Now](https://test-react-slideworks.vercel.app/) :tada:
 <br>
+
 <p align="center">
   <a href="#house-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#computer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
